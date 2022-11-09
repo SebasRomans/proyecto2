@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Yugimon!</title>
+        <link rel="StyleSheet" href="./Styles.css">
+    </head>
+    <body>
+        <section id="Seleccionar-mascota">
+            <h1 class="titulo">Yugimon!</h1> <!––Título––>
+            <h2 class="subtitulo">Elige tu mascota</h2> <!––Primer Subtítulo––>
+            <div id="contenedor-tarjetas" class="tarjetas"></div>
+            <button id="Botón-Mascota">Seleccionar</button>
+        </section>
+
+        <section id="ver-mapa">
+            <h1 class="subtitulo">Recorre el mapa con tu Yugimon</h1>
+            <canvas id="mapa"></canvas>
+            <button
+                onmouseup="detenerMovimiento()"    
+                ontouchend="detenerMovimiento()"
+                onmousedown="moverArriba()"
+                ontouchstart="moverArriba()"
+            >Arriba</button>
+            <div>
+                <button
+                    onmouseup="detenerMovimiento()"
+                    ontouchend="detenerMovimiento()"
+                    onmousedown="moverIzquierda()"
+                    ontouchstart="moverIzquierda()"
+                >Izquierda</button>
+                <button
+                    onmouseup="detenerMovimiento()"
+                    ontouchend="detenerMovimiento()"
+                    onmousedown="moverAbajo()"
+                    ontouchstart="moverAbajo()"
+                >Abajo</button>
+                <button
+                    onmouseup="detenerMovimiento()"
+                    ontouchend="detenerMovimiento()"
+                    onmousedown="moverDerecha()"
+                    ontouchstart="moverDerecha()"
+                >Derecha</button>
+            </div>
+        </section>
+        <section id="Seleccionar-ataque">
+            <h1 class="titulo">Yugimon!</h1> <!––Título––>
+            <h2 class="subtitulo">Elige tu ataque</h2>
+            <div id="contenedor-ataques" class="tarjetas-ataques"></div>
+            <div id="Mensajes">
+                    <p id="resultado">Éxito</p>
+                <section id="Reiniciar">
+                    <button id="Botón-Reiniciar">Reiniciar Juego</button>
+                </section>
+            </div>
+            <div class="ataques">
+                <div class="ataques-jugador">
+                    <p id="notaVida1">Victorias</p>
+                    <p id="vida-jugador">0</p>
+                    <p id="nombreMascota1">Mascota</p>
+                    <p id="mascota-jugador"></p>
+                    <div id="ataques-del-jugador"></div>
+                </div>
+                <div class="ataques-contrincante">
+                    <p id="notaVida2">Victorias</p>
+                    <p id="vida-contrincante">0</p>
+                    <p id="nombreMascota2">Mascota</p>
+                    <p id="mascota-contrincante"></p>
+                    <div id="ataques-del-contrincante"></div>
+                </div>
+            </div>
+        </section>
+
+        <script src="Mokepon.js"></script>
+    </body>
+</html>
+<!––"span" permite la manipulación de algún elemento del DOM de HTML a través de un documento JavaScript––>
